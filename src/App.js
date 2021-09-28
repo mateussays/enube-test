@@ -58,9 +58,9 @@ function App() {
   async function handleOption2(evt) {
     evt.preventDefault();
     const firstPeriod = getDateValue();
-    const date1 = new Date();
+    const date = new Date();
     const finalDate1 =
-      date1.getMonth() + 1 + "-" + date1.getDate() + "-" + date1.getFullYear();
+      date.getMonth() + 1 + "-" + date.getDate() + "-" + date.getFullYear();
     const data = await getPeriodDollar(firstPeriod, finalDate1);
     setData(data);
   }
@@ -87,7 +87,7 @@ function App() {
               class="btn btn-primary btn-sm ms-2"
               onClick={handleOption2}
             >
-              Resultado por período
+              Cotação por período
             </button>
           </div>
         </div>
@@ -105,7 +105,7 @@ function App() {
               className="btn btn-primary"
               onClick={handleInput2}
             >
-              Resultado por data
+              Cotação por data
             </button>
           </form>
         </div>
